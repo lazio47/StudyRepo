@@ -1,0 +1,3 @@
+blanket;cold;skiing
+boots,december
+snowman

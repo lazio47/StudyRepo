@@ -1,0 +1,6 @@
+portugal espanha
+alemanha;franca;inglaterra
+italia,brasil
+argentina;angola;chile;peru
+mexico
+canada

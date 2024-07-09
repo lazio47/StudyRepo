@@ -1,0 +1,51 @@
+Word Scramble
+
+A A C N T Y F R I D A Y Y Y 
+A A N M T A A U D O R E R T 
+U E B U O M R E C A Y Y A U 
+K E S T S U G U A U Y U U E 
+Y R E U L I R P A E E S N S 
+W A M A O Y S H T N O M A D 
+Y E W O F C Y D Y E F R J A 
+N A D E N A Y M A R E E U Y 
+A A D N E D E R D E B B L W 
+B N H S E K A O N B R M C I 
+E D C A R S R Y U O U E Y N 
+E N R S U U D U S T A C R T 
+Y A A T Y E H A S C R E O E 
+D U M C R H B T Y O Y D N R 
+
+wednesday	9	6,1	DownRight
+days	4	2,9	DownRight
+monday	6	6,3	DownRight
+january	7	7,13	Up
+august	6	4,9	Left
+winter	6	9,14	Down
+autumn	6	6,4	Up
+thursday	8	14,8	UpLeft
+march	5	14,3	Up
+october	7	14,10	Up
+monday	6	6,3	DownRight
+april	5	5,9	Left
+friday	6	1,7	Right
+tuesday	7	2,14	Down
+sunday	6	12,9	Up
+months	6	6,12	Left
+year	4	8,7	Down
+february	8	7,11	Down
+december	8	14,12	Up
+week	4	7,3	DownRight
+. . . N . . F R I D A Y Y . 
+. . . M . . . . D . . . R T 
+. . . U . . . . . A . . A U 
+. . . T S U G U A . Y . U E 
+. . . U L I R P A . . S N S 
+W . M A . . S H T N O M A D 
+Y E W O . . . . Y . F R J A 
+. A D E N . Y . A R E E . Y 
+. . D N E D E . D E B B . W 
+. . H S E K A . N B R M . I 
+. . C . R S R Y U O U E . N 
+. . R . . U D . S T A C . T 
+. . A . . . H A . C R E . E 
+. . M . . . . T Y O Y D . R 

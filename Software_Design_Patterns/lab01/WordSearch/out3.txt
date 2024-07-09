@@ -1,0 +1,12 @@
+
+CORRA 	 5  	 1,1  	 Right
+AMOR  	 4  	 5,5  	 Left
+BELO  	 4  	 5,1  	 Up
+TELA  	 4  	 2,2  	 DownRight
+
+C O R R A 
+O T . . . 
+L . E . . 
+E . . L . 
+B R O M A 
+

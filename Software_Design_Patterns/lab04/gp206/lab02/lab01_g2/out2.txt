@@ -1,0 +1,33 @@
+days            4       (1,8)      DOWNRIGHT 
+days            4       (8,5)      DOWNRIGHT 
+monday          6       (5,2)      DOWNRIGHT 
+january         7       (6,12)     UP        
+august          6       (3,8)      LEFT      
+winter          6       (8,13)     DOWN      
+autumn          6       (5,3)      UP        
+march           5       (13,2)     UP        
+october         7       (13,9)     UP        
+monday          6       (5,2)      DOWNRIGHT 
+april           5       (4,8)      LEFT      
+friday          6       (0,6)      RIGHT     
+tuesday         7       (1,13)     DOWN      
+sunday          6       (11,8)     UP        
+months          6       (5,11)     LEFT      
+year            4       (7,6)      DOWN      
+february        8       (6,10)     DOWN      
+december        8       (13,11)    UP        
+week            4       (6,2)      DOWNRIGHT 
+...n..fridayy.
+...m....d...rt
+...u.....a..au
+...tsugua.y.ue
+...ulirpa..sns
+..ma..shtnomad
+..wo....y.frja
+...en.y.aree.y
+....ede.debb.w
+..h..ka.nbrm.i
+..c...ryuoue.n
+..r.....stac.t
+..a......cre.e
+..m......oyd.r

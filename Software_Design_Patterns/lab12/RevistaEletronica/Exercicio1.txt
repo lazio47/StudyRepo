@@ -1,0 +1,11 @@
+Documento para responder às diferentes alíneas:
+Os algoritmos foram analisados por tempo de inserção
+
+
+a) Padrão Strategy, Padrão Template Method
+
+
+b) - Diagrama UML
+
+
+c)

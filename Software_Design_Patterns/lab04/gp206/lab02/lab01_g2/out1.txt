@@ -1,0 +1,19 @@
+programming     11      (11,5)     UP        
+java            4       (8,0)      DOWN      
+words           5       (10,10)    UPLEFT    
+lines           5       (4,4)      LEFT      
+civil           5       (5,10)     DOWN      
+test            4       (1,7)      RIGHT     
+stack           5       (0,0)      RIGHT     
+stack.......
+.......test.
+............
+............
+............
+..........c.
+......s...i.
+.......d..v.
+j.......r.i.
+a........ol.
+v.........w.
+a...........

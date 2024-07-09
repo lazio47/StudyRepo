@@ -1,0 +1,26 @@
+Avaliacao gp202
+
+=> Os programas compilam sem erros
+=> Acho que poderia se criar um projecto para cada problema
+=> Não foi feito a POO
+
+====================== WSSolver =============================
+
+=> Da erro "Erro: Puzzle nao quadrado" para um puzzle quarado (alguns)
+=> Não tratou um erro de substring
+=> Não detecta letra minuscula na sopa
+=> Não verifica palavras com todas maiúsculas
+=> Executa com palavras não existinte
+=> Executa com palavra repetida
+=> Função de print desempenha várias actividades
+=> Embora o codigo nao desempenhe todas as funcoes, está comentado e fácil de ler 
+=> Varias estruturas "if" e "for" dentro de outras
+
+====================== WSGenerator =============================
+=> O generator, muitas vezes, não consegue introduzir palavras
+=> Gera matrizes de tamanho maiores que 40
+=> Da prints com espaco, que também vao ao ficheiro de saida
+=> Varias estruturas "if" e "for" dentro de outras
+=> Não é feito nenhum teste para verificar se o puzzle é valido
+=> "if" com varias condicoes
+=> Podia se criar uma funcao para inserir palavras

@@ -1,0 +1,16 @@
+blanket         7       (8,8)      UP        
+cold            4       (6,4)      RIGHT     
+skiing          6       (8,3)      UP        
+boots           5       (0,1)      DOWNRIGHT 
+december        8       (2,1)      DOWN      
+snowman         7       (1,9)      DOWN      
+.b........
+..o......s
+.d.o....tn
+.e.gt...eo
+.c.n.s..kw
+.e.i....nm
+.m.icoldaa
+.b.k....ln
+.e.s....b.
+.r........

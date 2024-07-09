@@ -1,0 +1,7 @@
+python
+java
+linux windows
+matlab;octave
+compiladores
+
+

@@ -1,0 +1,28 @@
+Classe abstrata java.io.InputStream:
+
+	metodo padrao: public int read(byte b[])
+	etapas abstratas: read()
+	
+	classe concreta: FileInputStream
+	implementa os metotodos: read com varias assinaturas
+
+	outra classe concreta: ByteArrayInputStream
+	
+Classe astrata java.io.OutputStream:
+
+	metodo padrao: write(byte[] b) contem os passos todos juntamente com read(b, 0, b.length);
+	etapas abstratas: write()
+	
+	classe concreta ByteArrayOutputStream
+	implementa os metotodos: write com duas assinaturas diferentes, toString()
+	
+Classe astrata java.util.AbstractList:
+
+	metodo padrao: public boolean add(E e)
+	etapas abstratas: get(int index)
+	
+	etapas opcionais:removeRange(int fromIndex, int toIndex),  ...
+	
+	classe concreta: java.util.ArrayList
+	implementa os metotodos: get(int index), set(int index, E element), ...
+	

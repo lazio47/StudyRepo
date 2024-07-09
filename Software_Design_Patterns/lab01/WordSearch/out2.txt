@@ -1,0 +1,25 @@
+
+SAPATO       	 6  	 2,1  	 Right
+TABLET       	 6  	 4,1  	 Right
+CAMISA       	 6  	 5,2  	 Right
+PLAY         	 4  	 6,4  	 Right
+IDEIA        	 5  	 10,1  	 Right
+CONVERSAR    	 9  	 12,2  	 Right
+JOANA        	 5  	 10,11 	 Up
+ANA          	 3  	 4,11 	 Down
+BOLA         	 4  	 1,7  	 Left
+BOLADA       	 6  	 1,7  	 Right
+
+. . . A L O B O L A D A 
+S A P A T O . . . . . . 
+. . . . . . . . . . . . 
+T A B L E T . . . . A . 
+. C A M I S A . . . N . 
+. . . P L A Y . . . A . 
+. . . . . . . . . . N . 
+. . . . . . . . . . A . 
+. . . . . . . . . . O . 
+I D E I A . . . . . J . 
+. . . . . . . . . . . . 
+. C O N V E R S A R . . 
+

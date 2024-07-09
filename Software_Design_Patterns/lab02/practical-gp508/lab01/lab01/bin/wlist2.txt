@@ -1,0 +1,5 @@
+wednesday;days;monday;january;august;winter autumn thursday
+march
+october
+monday,april,friday,tuesday,sunday,months,year,february
+december;week
