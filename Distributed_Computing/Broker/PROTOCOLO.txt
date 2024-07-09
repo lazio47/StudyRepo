@@ -1,0 +1,25 @@
+Definiram-se um conjunto de classes em protocol.py que implementam este protocolo.
+
+● Mensagem de Subscrição de um tópico:
+	Class: SubscribeMessage
+	Representação JSON: {"command": "subscribe", "topic": topic}
+	Representação PICKLE: {"command": "subscribe", "topic": topic}
+	Representação XML: <root><command>subscribe</command><topic>topic</topic></root>
+
+● Mensagem de Publicação num tópico:
+	Class: TextMessage
+	Representação JSON: {"command": "message", "message": value, "topic": topic}
+	Representação PICKLE: {"command": "message", "message": value, "topic": topic}
+	Representação XML: <root><command>message</command><message>value</message><topic>topic</topic></root>
+	
+● Mensagem de Pedido de Listagem de tópicos:
+	Class: ListMessage
+	Representação JSON: {"command": "list_topics"}
+	Representação PICKLE: {"command": "list_topics"}
+	Representação XML: <root><command>list_topics</command></root>
+	
+● Mensagem de Cancelamento de Subscrição de um tópico:
+	Class: CancelMessage
+	Representação JSON: {"command": "cancel", "topic": topic}
+	Representação PICKLE: {"command": "cancel", "topic": topic}
+	Representação XML: <root><command>cancel</command><topic>topic</topic></root>
