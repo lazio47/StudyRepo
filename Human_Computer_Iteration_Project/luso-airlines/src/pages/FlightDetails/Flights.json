@@ -1,0 +1,30 @@
+[
+    {
+        "id":"001",
+        "date":"9/5",
+        "departure":"LIS",
+        "departure_time":"05:00",
+        "arrival":"RAI",
+        "arrival_time":"08:20",
+        "price":300.00
+        
+    },
+    {
+        "id":"002",
+        "date":"9/5",
+        "departure":"LIS",
+        "departure_time":"13:50",
+        "arrival":"RAI",
+        "arrival_time":"16:10",
+        "price":320.00
+    },
+    {
+        "id":"003",
+        "date":"9/5",
+        "departure":"LIS",
+        "departure_time":"20:30",
+        "arrival":"RAI",
+        "arrival_time":"23:50",
+        "price":250.00
+    }
+]

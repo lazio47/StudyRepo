@@ -1,0 +1,83 @@
+/* RegisterPage.css */
+
+.registerPage_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registerPage_container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: -50px; /* Adjusted margin-top to move the container up */
+}
+
+.registerPage_title p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4b42c7;
+  margin-bottom: 20px;
+}
+
+.registerPage_form h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.input-group input:last-child {
+  margin-right: 0;
+}
+
+button {
+  background-color: #4b42c7;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Increased margin bottom to create more separation */
+}
+
+button:last-child {
+  margin-left: 10px; /* Reset margin bottom for the last button (Apple button) */
+}
+
+button:hover {
+  background-color: #3a33a1;
+}
+
+.text-white {
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.registerPage_nav {
+  color: #4b42c7;
+  cursor: pointer;
+}
+
+.registerPage_nav:hover {
+  text-decoration: underline;
+}

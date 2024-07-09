@@ -1,0 +1,13 @@
+/* MyCarousel.css */
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+}
+
+.carousel-container .carousel .slide img {
+  width: 100%;
+  height: 784px; /* Defina uma altura fixa para todas as imagens do carrossel */
+  object-fit: cover;
+}

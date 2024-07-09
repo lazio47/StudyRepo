@@ -1,0 +1,9 @@
+.footer-link {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .footer-link:hover {
+    color: #8A2BE2;
+  }
+

@@ -1,0 +1,116 @@
+/* Navbar.css */
+
+.Navbar nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  padding: 0 20px;
+  border-bottom: 2px solid black; /* Adiciona uma linha preta na parte inferior da navbar */
+}
+
+.Navbar nav h2 {
+  font-size: 26px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.Navbar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Navbar nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.Navbar nav ul li a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+.Navbar nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  margin: 0 auto 0 auto;
+  border-radius: 2px;
+  background: #522FCF;
+  transition: width 0.2s ease-out;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+
+.Navbar nav ul li a:hover::after {
+  width: 80%;
+}
+
+.Navbar nav ul li a:hover {
+  color: #522FCF;
+}
+
+.Navbar nav ul li a.active {
+  color: #522FCF;
+  text-decoration: none; /* Remove o sublinhado quando um item está ativo */
+}
+
+.Navbar nav ul li a.active::after {
+  width: 0; /* Remove a linha de baixo quando um item está ativo */
+}
+
+.Navbar .connection {
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: linear-gradient(84.12deg, #522FCF -24.93%, #9271E8 139.25%);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px; /* Adiciona margem superior para separar o botão de login */
+}
+
+.Navbar .connection:hover {
+  background: linear-gradient(84.12deg, #9271E8 139.25%, #522FCF -24.93%);
+}
+
+@media (max-width: 768px) {
+  .Navbar nav {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      padding: 10px 0;
+  }
+
+  .Navbar nav h2 {
+      margin-bottom: 10px;
+  }
+
+  .Navbar nav ul li {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .Navbar nav ul li a {
+      font-size: 18px;
+  }
+
+  .Navbar .connection {
+      margin-top: 20px;
+  }
+}

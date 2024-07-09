@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Impede o scroll */
+}
+
+.loginPage_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o contêiner mais para cima */
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da janela */
+    width: 100%;
+    background-color: #f0f2f5; /* Adiciona um fundo mais claro */
+    padding-top: 50px; /* Espaço adicional no topo */
+}
+
+.loginPage_container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #ffffff; /* Muda o fundo para branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    color: #333; /* Muda a cor do texto para um cinza escuro */
+    max-width: 800px; /* Aumenta a largura máxima para melhorar o layout */
+    width: 100%; /* Faz o contêiner ocupar toda a largura disponível */
+    overflow: hidden; /* Remove o scroll horizontal */
+}
+
+.loginPage_title p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4b42c7; /* Cor do título */
+}
+
+.loginPage_input form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.loginPage_input label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.loginPage_input input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.loginPage_input input:focus {
+    border-color: #4b42c7;
+    outline: none;
+}
+
+.loginPage_input div {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.loginPage_input div p {
+    margin: 0;
+    color: #4b42c7;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.loginPage_loginButtons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.loginPage_loginButtons button {
+    width: 100%; /* Define a largura dos botões para serem iguais */
+    margin-left: 0;
+}
+
+.loginPage_loginButtons button:nth-child(3) { /* Target the third button (Apple) */
+    margin-left: 0;
+}
+
+
+button {
+    background-color: #4b42c7;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3a33a1;
+}
+
+.loginPage_loginButtons button {
+    width: 100%; /* Define a largura dos botões para serem iguais */
+}
+
+.text-white {
+    color: #333; /* Muda a cor do texto para um cinza escuro */
+}
+
+.text-white p {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.text-white a {
+    color: #4b42c7;
+    cursor: pointer;
+}
+
+.text-white a:hover {
+    text-decoration: underline;
+}
+
+.registerPage_nav {
+    display: inline-block;
+    margin-left: 0.25rem;
+}

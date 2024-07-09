@@ -1,0 +1,159 @@
+/* TravelCard.css */
+
+.travel-card-container {
+  position: relative;
+  background-color: #6c63ff;
+  padding: 2% 4%;
+  border-radius: 10px;
+  color: #fff;
+  max-width: 800px;
+  margin: -250px auto 0; /* Ajusta a margem superior para alinhar o card mais próximo da navbar */
+  overflow: hidden; /* Remove o scroll horizontal */
+}
+
+.form-container {
+  max-height: 470px; /* Aumenta a altura para exibir mais viagens */
+  overflow-y: auto; /* Adiciona um scroll vertical apenas ao formulário */
+}
+
+.search-button {
+  margin-left: auto; /* Move o botão para a margem direita */
+  border: 1px solid #2b0857; /* Adiciona uma borda preta */
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* Adiciona o alinhamento vertical */
+}
+
+.row > div {
+  flex-basis: calc(50% - 10px); /* Divide em duas colunas */
+  margin-bottom: 10px;
+}
+
+.search-button-container {
+  margin-left: -10px;
+}
+label {
+  margin-bottom: 6px;
+  display: block;
+}
+
+
+.select-trip-type {
+  width: 10%; /* Defina o tamanho desejado */
+}
+
+/* Restante do seu CSS existente */
+
+
+input,
+select {
+  width: calc(100% - 22px); /* Reduz a largura para acomodar a margem */
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 9px; /* Reduz o espaçamento entre as caixas de texto */
+}
+
+
+button {
+  background-color: #4b42c7;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: calc(50% - 5px); /* Define a largura dos botões para serem iguais */
+}
+
+button[type="submit"] {
+  background-color: #5f14ff;
+  margin-right: 15px;
+}
+
+button[type="button"] {
+  background-color: #4b42c7;
+  margin-right: 12px; /* Adiciona margem à direita */
+  width: calc(50% - px); /* Define a largura dos botões para serem iguais */
+}
+
+button[type="button"]:hover {
+  background-color: #3b3285;
+}
+
+button[type="submit"]:hover {
+  background-color: #630fda;
+}
+
+button[type="button"].remove-button,
+button[type="submit"].remove-button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 13px;
+  cursor: pointer;
+  width: calc(50% - 280px); /* Define a largura dos botões para serem iguais */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .row > div {
+    flex-basis: 100%; /* Em telas menores, uma coluna */
+  }
+}
+
+/* MyCarousel.css, TravelCard.css, etc. */
+
+.content {
+  margin-bottom: 100px; /* Adicione margem na parte inferior do conteúdo para criar espaço para o Footer */
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 6px;
+  margin-bottom: 9px;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: calc(100% - 2px);
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+}
+
+.react-autosuggest__suggestion {
+  padding: 10px;
+  cursor: pointer;
+  color: #333; /* Cor do texto */
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #f0f0f0; /* Cor de fundo das sugestões destacadas */
+}

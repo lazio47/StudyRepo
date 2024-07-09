@@ -1,0 +1,19 @@
+
+  .profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile-image img {
+    width: 500px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    border-radius: 50%; /* Para dar um efeito circular à imagem */
+  }
+  
+  .profile-data {
+    flex-grow: 1;
+    padding-left: 20px; /* Espaçamento entre a imagem e os dados */
+  }
+  

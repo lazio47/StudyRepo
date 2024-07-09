@@ -1,0 +1,18 @@
+.checkin-textfield {
+  max-width: 90%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a mesma fonte da Navbar */
+}
+
+/* Checkin.css */
+.checkin-container {
+  background-image: url('https://giffiles.alphacoders.com/107/107600.gif'); /* Substitua pelo caminho da imagem desejada */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #ffffff;
+  overflow: scroll;
+}
