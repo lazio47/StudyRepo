@@ -1,0 +1,36 @@
+% Duplicated Declarations error
+define pen myPen {
+    color = yellow;
+    position = (0, 0);
+    thickness = 3;
+};
+
+define pen myPen {
+    color = green;
+    position = (0, 0);
+    thickness = 2;
+};
+
+% Invalid Property name Error
+define pen myPen2 {
+    color = green;
+    position = (0, 0);
+    thickness = 2;
+};
+
+
+% Unmathed Parentheses Error
+define pen myPen {
+    color = red;
+    position = (0, 0);
+    thickness = 5;
+};
+
+
+% Using Undefined Pen Error
+define pen pen1 {
+    color = yellow;
+    position = (0, 0);
+};
+
+pen2 forward 100;  % 'pen2' is not defined

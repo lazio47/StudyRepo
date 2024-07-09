@@ -1,0 +1,28 @@
+#!/bin/bash
+
+tests=$(ls)
+
+cd ../src
+#antlr4-clean 
+antlr4-build PDrawGrammar
+echo "Analise Semântica PDrawGrammar:"
+for test in $tests; do
+    if [[ $test == *.pdraw ]]; then
+    echo "$test:"
+     antlr4-run  < "../examples/$test"
+    echo ""
+    fi
+done
+cd ../src/SecondaryGrammarSemanticAnalysis
+echo
+echo "Analise Semântica PDrawSecondaryGrammar:"
+antlr4-build -python
+
+
+for test in $tests; do
+    if [[ $test == *.ipdraw ]]; then
+    echo "$test:"
+    antlr4-run -python < "../../examples/$test"
+    echo ""
+    fi
+done

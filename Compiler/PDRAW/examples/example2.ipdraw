@@ -1,0 +1,20 @@
+% Definindo canvas e selecionando
+define canvas myCanvas "My Second Canvas" (1024, 768);
+select canvas myCanvas;
+background = black;
+
+% Entrada de dados
+int distance = stdin "Enter the distance to move: ";
+int angle = stdin "Enter the angle to turn: ";
+
+% Movimentos baseados na entrada
+forward distance;
+right angle;
+forward distance;
+left angle;
+forward distance;
+
+% Exibindo resultados
+string resultMessage = "Moved a total of " distance * 3 " units." ;
+resultMessage -> stdout;
+

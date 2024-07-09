@@ -1,0 +1,34 @@
+% Invalid loop Condition Errors
+define pen myPen {
+    color = blue;
+    position = (0, 0);
+};
+
+for (int i = 0; "condition"; i = i + 1) {  % Loop condition should be a boolean expression
+    myPen forward 10;
+};
+
+
+
+while (100) {  % Condition should be a boolean expression
+    myPen forward 10;
+};
+while (penExists) {  % 'penExists' is not declared
+    myPen forward 10;
+};
+
+
+
+% Invalid Conditional Expression Errors
+if (100) {  % Condition should be a boolean expression
+    myPen forward 50;
+};
+
+
+% Invalid Function Usage Error
+define pen myPen2 {
+    color = blue;
+    position = (0, 0);
+};
+
+myPen2 forward 100;

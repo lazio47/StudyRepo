@@ -1,0 +1,120 @@
+define canvas Canvas1 "FirstCanvas" (800, 600);
+define canvas Canvas2 "SecondCanvas" (800, 600);
+define canvas Canvas3 "ThirdCanvas" (800, 600);
+
+select canvas Canvas1;
+
+% Set background color to blue for Canvas1
+background = blue;
+
+% Define pens with different colors
+define pen PenRed {
+    color = red;
+    position = (400, 300);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+define pen PenYellow {
+    color = yellow;
+    position = (400, 300);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+define pen PenGreen {
+    color = green;
+    position = (400, 300);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+define pen PenBlue {
+    color = blue;
+    position = (400, 300);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+define pen PenPurple {
+    color = #A020F0FF;
+    position = (400, 300);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+define pen PenOrange {
+    color = #FFA500FF;
+    position = (400, 300);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+
+% Declare pen instances
+pen pRed = new PenRed;
+pen pYellow = new PenYellow;
+pen pGreen = new PenGreen;
+pen pBlue = new PenBlue;
+pen pPurple = new PenPurple;
+pen pOrange = new PenOrange;
+
+% Draw the sun using the first two pens (yellow and red) in the top right corner of Canvas1
+pYellow down;
+pYellow forward 50;
+pYellow left 90º;
+pYellow forward 50;
+pRed down;
+pRed forward 50;
+pRed left 90º;
+pRed forward 50;
+
+% Switch to Canvas2 and draw with two pens at the same time
+select canvas Canvas2;
+
+pYellow down;
+pRed down;
+pYellow forward 50;
+pYellow left 90º;
+pYellow forward 50;
+pRed forward 50;
+pRed left 90º;
+pRed forward 50;
+
+% Switch to Canvas3, set background to black, and draw using all pens at the same time
+select canvas Canvas3;
+
+% Set background color to black for Canvas3
+background = black;
+
+% Simulate the turtle drawing with multiple pens
+int steps = 0;
+
+while (steps < 360) {
+    % Put all pens down simultaneously
+    pRed down;
+    pYellow down;
+    pGreen down;
+    pBlue down;
+    pPurple down;
+    pOrange down;
+    
+    % Move all pens forward by the current step count
+    pRed forward steps;
+    pYellow forward steps;
+    pGreen forward steps;
+    pBlue forward steps;
+    pPurple forward steps;
+    pOrange forward steps;
+    
+    % Rotate all pens by 59 degrees
+    pRed left 59º;
+    pYellow left 59º;
+    pGreen left 59º;
+    pBlue left 59º;
+    pPurple left 59º;
+    pOrange left 59º;
+    
+    % Increment the step count
+    steps = steps + 1;
+};

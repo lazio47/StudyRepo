@@ -1,0 +1,237 @@
+module(stat, canvasList) ::= <<
+import sys
+from antlr4 import *
+from PDrawSecondaryGrammarLexer import PDrawSecondaryGrammarLexer
+from PDrawSecondaryGrammarParser import PDrawSecondaryGrammarParser
+from graphics import *
+from Interpreter import Interpreter
+import math
+import time
+
+class PenType:
+    def __init__(self, win):
+        # valores default
+        self.win = win
+        self.position = Point(0, 0)
+        self.orientation = 0  # em graus
+        self.pressure = -1
+        self.thickness = 1
+        self.color = "black"
+        self._down = False
+
+    def get_thickness(self):
+        if self.pressure == 0:
+            return 1
+        elif self.pressure == -1:
+            self.up
+            return 0
+        else:
+            return self.thickness * self.pressure
+    
+    def set_position(self, point):
+        self.position = point
+        return self
+    
+    def increase_position(self, point):
+        x = self.position.getX() + point.getX()
+        y = self.position.getY() + point.getY()
+        self.position = Point(x, y)
+        return self
+
+    def set_thickness(self, thickness):
+        self.thickness = thickness
+        return self
+
+    def set_color(self, color):
+        self.color = color
+        return self
+
+    def set_orientation(self, orientation):
+        self.orientation = orientation
+        return self
+
+    def set_pressure(self, pressure):
+        self.pressure = pressure
+        return self
+
+    def pause(self, microseconds):
+        seconds = microseconds / 1_000_000.0
+        time.sleep(seconds)
+        return self
+
+    def forward(self, distance):
+        if self._down:
+            angle_rad = math.radians(self.orientation)
+            new_x = self.position.getX() + distance * math.cos(angle_rad)
+            new_y = self.position.getY() - distance * math.sin(angle_rad)
+            new_position = Point(new_x, new_y)
+            line = Line(self.position, new_position)
+            line.setWidth(self.get_thickness()) # self.thickness)
+            line.setFill(self.color)
+            line.draw(self.win)
+            self.position = new_position
+            return self
+        else:
+            angle_rad = math.radians(self.orientation)
+            new_x = self.position.getX() + distance * math.cos(angle_rad)
+            new_y = self.position.getY() - distance * math.sin(angle_rad)
+            self.position = Point(new_x, new_y)
+            return self
+
+    def backward(self, distance):
+        self.forward(-distance)
+        return self
+
+    def left(self, angle):
+        self.orientation = (self.orientation + angle) % 360
+        return self
+
+    def right(self, angle):
+        self.orientation = (self.orientation - angle) % 360
+        return self
+
+    def down(self):
+        self._down = True
+        return self
+
+    def up(self):
+        self._down = False
+        return self
+    
+    def print_pen(self):
+        print(self)
+        return self
+    
+    def get_pen(self):
+        new_pen = PenType(self.win)
+        new_pen.set_color(self.color)
+        new_pen.set_position(Point(self.position.getX(),self.position.getY()))
+        new_pen.set_orientation(self.orientation)
+        new_pen.set_thickness(self.thickness)
+        new_pen.set_pressure(self.pressure)
+        new_pen._down = self._down
+        return new_pen
+
+    def __str__(self):
+        return (f"color={self.color}, position=({self.position.getX()}, {self.position.getY()}), "
+                f"orientation={self.orientation}, thickness={self.thickness}, pressure={self.pressure}")
+
+def pause(microseconds):
+    seconds = microseconds / 1_000_000.0
+    time.sleep(seconds)
+
+canvas = GraphWin("", 500, 500)
+
+<stats(stat)>
+
+<canvasList:{canvas | <canvas>.getMouse()
+<canvas>.close()}; separator="\n">
+>>
+
+
+
+
+
+stats(stat) ::= <<
+<stat; separator="\n">
+>>
+
+execute(psec, filename) ::= <<
+visitor = Interpreter()
+visitor.setPen(<psec>)
+with open(<filename>, 'r') as arquivo:
+    for line in arquivo:
+        input_stream = InputStream(line)
+        lexer = PDrawSecondaryGrammarLexer(input_stream)
+        stream = CommonTokenStream(lexer)
+        parser = PDrawSecondaryGrammarParser(stream)
+        tree = parser.program()
+        if parser.getNumberOfSyntaxErrors() == 0:
+            visitor.visit(tree)
+>>
+
+decls(decls) ::= <<
+<decls; separator="\n">
+>>
+
+pointAssign(var, x, y) ::= <<
+<var> = Point(<x>,<y>)
+>>
+
+assignment(var, value) ::= "<var> = <value>"
+
+binaryOperation(var, e1, op, e2) ::= <<
+<var> = <e1> <op> <e2>
+>>
+
+typeConversion(type, var, value) ::= <<
+<var> = <type>(<value>)
+>>
+
+program(stats) ::= <<
+<stats; separator="\n">
+>>
+
+newPen(penType) ::= <<
+<penType>.get_pen()
+>>
+
+newPenDefault() ::= <<
+PenType(canvas)
+>>
+
+penDecl(penName, properties, canvas) ::= <<
+<penName> = PenType(<canvas>)
+<properties; separator="\n">
+>>
+
+property(penName, propName, value) ::= <<
+<penName>.set_<propName>(<value>)
+>>
+
+method(var, method, arg) ::= <<
+<var>.<method>(<arg>)
+>>
+
+stat(stat) ::= <<
+<stat>
+>>
+
+print(obj) ::= <<
+print(<obj>)
+>>
+
+canvasDecl(var, title, width, height) ::= <<
+<var> = GraphWin(<title>, <width>, <height>)
+>>
+
+conditional(condition, ifBlock, elifBlocks, hasElse, elseBlock) ::= <<
+if <condition>:
+    <ifBlock>
+<elifBlocks:{elifBlock | }><elifBlock><end>
+<if(hasElse)>
+else:
+    <elseBlock>
+<endif>
+>>
+
+elifBlock(condition, block) ::= <<
+elif <condition>:
+    <block>
+>>
+
+block(stats) ::= <<
+<stats; separator="\n">
+>>
+
+loopWhile(init, cond, body, update) ::= <<
+<init>
+while (<cond>):
+    <body>
+    <update>
+>>
+
+while(condition, stats) ::= <<
+while (<condition>):
+    <stats; separator="\n">
+>>

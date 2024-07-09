@@ -1,0 +1,20 @@
+for (i = 0; i < 10; i = i + 1) {  % 'i' should be declared before use
+    myPen forward 10;
+};
+for (int i = 0; i < 10; ) {  % Missing assignment in the loop
+    myPen forward 10;
+};
+for (int i = 0; i < 10; i++) {   % Increment operation 'i++' should be specified, to be i=i+1
+    myPen forward 10;
+};
+if () {  % Condition is missing
+    myPen forward 10;
+};
+if (true) {
+    myPen forward 10;
+} else if (false) {
+    myPen backward 10;
+} else  % 'else' should have a block
+;
+myFunction("test");  % Function 'myFunction' is not defined
+pen black = new ; % Create pen which color name

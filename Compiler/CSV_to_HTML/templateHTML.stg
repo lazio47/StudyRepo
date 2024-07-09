@@ -1,0 +1,23 @@
+group templateHTML;
+
+table(head, rows) ::= <<
+\<table style="width:100%; border-collapse:collapse;"\>
+	\<tr style="background-color:#f2f2f2;"\>
+	<head: {headval | 
+		\<th style="border:1px solid #ddd; padding:8px;"\> 
+			<headval> 
+		\</th\>
+	}>
+    	\</tr\>
+    	<rows: {row | 
+    	\<tr style="border:1px solid #ddd; text-align: center;" \>
+	<row: {field | 
+		\<td style="padding:8px;"\> 
+			<field> 
+		\</td\>
+		}>
+    	\</tr\> 
+    	}>
+\</table\>
+>>
+

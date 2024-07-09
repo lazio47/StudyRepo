@@ -1,0 +1,28 @@
+define canvas Canvas1 "Canvas 1" (800, 600);
+select canvas Canvas1;
+background = #F0F0F0FF; 
+
+position (400, 300);
+down;
+
+% Draw a colorful spiral
+color red;
+for (int i = 0; i < 360; i = i + 10) {
+    forward i/10;
+    left 90º;
+};
+
+pause 2000;
+
+
+
+% Draw a star
+up;
+position (600, 400);
+down;
+color yellow;
+for (int i = 0; i < 5; i = i + 1) {
+    forward 100;
+    left 144º;
+};
+

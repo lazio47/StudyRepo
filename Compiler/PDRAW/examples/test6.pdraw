@@ -1,0 +1,17 @@
+int x = 1/2--4+5+8/4;
+int n = 2;
+real m = 0.2;
+n = n*n*m+x;
+n -> stdout;
+m = n/m+x*m-n;
+m -> stdout;
+-n -> stdout;
+-m -> stdout;
+1-1/1 -> stdout;
+4//2 -> stdout;
+5\\2 -> stdout;
+5/2 -> stdout;
+bool b=true;
+bool c=false;
+b or c and b -> stdout;
+not c and c or b -> stdout;

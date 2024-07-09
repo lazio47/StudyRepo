@@ -1,0 +1,22 @@
+% Definindo canvas e selecionando
+define canvas myCanvas "My First Canvas" (800, 600);
+select canvas myCanvas;
+color backgroundColor = white;
+background = backgroundColor;
+
+% Desenhando um quadrado com loop for
+int sideLength = 100;
+int i;
+for (i = 0; i < 4; i = i + 1) {
+    forward sideLength;
+    right 90;
+    pause 500;  % Pausando 500 ms entre os movimentos
+};
+
+% Verificando a cor do fundo
+if (backgroundColor == white) {
+    "The background is white" -> stdout;
+} else {
+    "The background is not white" -> stdout;
+};
+

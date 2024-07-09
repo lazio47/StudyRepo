@@ -1,0 +1,26 @@
+% Square example with different thickness
+
+define pen PenType2 {
+    color = black;
+    position = (10, 10);
+    orientation = 0;
+    thickness = 1;
+    pressure = 1;
+};
+
+pen p2 = new PenType2;
+p2 down;
+
+p2 forward 50;
+p2 left 90°;
+p2 <- thickness 2;
+p2 forward 50;
+p2 left 90°;
+p2 <- thickness 3;
+p2 forward 50;
+p2 left 90°;
+p2 <- thickness 4;
+p2 forward 50;
+p2 left 90°;
+
+p2 up;

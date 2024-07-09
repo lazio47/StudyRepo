@@ -1,0 +1,40 @@
+int choice = int(stdin "Enter 1 for circle, 2 for linem 3 for triangle, 4 for square: ");
+define pen PenType4 {
+   color = yellow;
+   position = (50, 50);
+   orientation = 90º;
+   thickness = 5;
+   pressure = 0.5;
+};
+
+pen p4 = new PenType4;
+
+if (choice == 1) {
+    % Draw Circle
+    p4 down;
+    int segments = 36; % More segments = smoother circle
+    for (int i = 0; i < segments; i = i + 1) {
+        p4 forward 10;
+        p4 right 10º;
+    };
+} else if (choice == 2) {
+    % Draw Line
+    p4 down;
+    p4 forward 100;
+} else if (choice == 3) {
+    % Draw Triangle
+    p4 down;
+    for (int i = 0; i < 3; i = i + 1) {
+        p4 forward 50;
+        p4 right 120º;
+    };
+} else if (choice == 4) {
+    % Draw Square
+    p4 down;
+    for (int i = 0; i < 4; i = i + 1) {
+        p4 forward 50;
+        p4 right 90º;
+    };
+} else {
+    "Invalid choice" -> stdout;
+};

@@ -1,0 +1,35 @@
+% Undeclared Variable Error
+define pen myPen {
+    color = blue;
+    position = (0, 0);
+};
+
+myPen forward 100º;
+myPen <- color red;
+int x = 10;
+int y = x + z;  % 'z' is undeclared
+int 1aa;
+
+% Incompatible Types in expression
+string z = "hello";
+int y = x + z;  % Incompatible types in expression
+
+
+% Incorrect DataType in Expression Error
+define pen myPen {
+    color = red;
+    position = (0, 0);
+};
+
+myPen forward 100;
+myPen <- position  (10, "up");  % Position should be two integers or expressions resulting in integers
+
+
+% Type Mismatch Error
+define pen myPen {
+    color = green;
+    position = (0, 0);
+    thickness = 5;
+};
+
+myPen <- thickness "thick";  % 'thickness' should be an integer

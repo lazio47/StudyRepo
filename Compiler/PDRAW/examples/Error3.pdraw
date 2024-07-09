@@ -1,0 +1,29 @@
+% Invalid Color Assignment Error 
+  % instead should be #FFFFFF(FF) or one of the colors already specified in the grammar like "red"
+define pen myPen {
+    color = black;
+    position = (0, 0);
+};
+
+myPen <- color red;
+
+define canvas myCanvas "My Canvas" (800, 600) background = red;
+
+define canvas myCanvas "Canvas" (800, "600");  % Height should be an integer
+
+
+% Errors for double or missing semicolon
+define pen myPen {
+    color = blue;
+    position = (0, 0);
+};
+myPen left 100;  % Double semicolon
+
+define canvas myCanvas "Main Canvas" (1024, 768);
+background = green; 
+
+
+pause "100";  % 'pause' should take an integer value
+
+
+bool result = myPen and true;  % 'pen' is not a boolean

@@ -1,0 +1,21 @@
+% Triangle example with different colors
+
+define pen PenType1 {
+    color = red;
+    position = (50, 50);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+
+pen p1 = new PenType1;
+p1 down;
+p1 forward 100;
+p1 left 120°;
+p1 <- color blue;
+p1 forward 100;
+p1 left 120°;
+p1 <- color green;
+p1 forward 100;
+p1 left 120°;
+p1 up;

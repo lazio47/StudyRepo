@@ -1,0 +1,32 @@
+% Hexagon example
+
+define pen PenType3 {
+    color = blue;
+    position = (20, 20);
+    orientation = 0;
+    thickness = 2;
+    pressure = 1;
+};
+
+pen p3 = new PenType3;
+p3 down;
+
+p3 forward 50;
+p3 left 60°;
+pause 500; % pausa de 0.5 segundos
+p3 forward 50;
+p3 left 60°;
+pause 500;
+p3 forward 50;
+p3 left 60°;
+pause 500;
+p3 forward 50;
+p3 left 60°;
+pause 500;
+p3 forward 50;
+p3 left 60°;
+pause 500;
+p3 forward 50;
+p3 left 60°;
+
+p3 up;

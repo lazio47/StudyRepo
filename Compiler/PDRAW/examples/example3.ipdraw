@@ -1,0 +1,28 @@
+% Definindo canvas e selecionando
+define canvas myCanvas "My Third Canvas" (800, 600);
+select canvas myCanvas;
+background = blue;
+
+% Declarações de variáveis
+int i;
+real radius = 50.0;
+real angleIncrement = PI / 4;  % Incremento de 45 graus em radianos
+color drawColor = red;
+
+% Loop desenhando um círculo aproximado
+color drawColor;
+thickness 2;
+
+for (i = 0; i < 8; i = i + 1) {
+    forward radius;
+    right 45;
+    pause 250;  % Pausando 250 ms entre os movimentos
+};
+
+% Condicional para alterar a cor baseada na variável
+if (drawColor == red) {
+    "The drawing color is red." -> stdout;
+} else {
+    "The drawing color is not red." -> stdout;
+};
+
