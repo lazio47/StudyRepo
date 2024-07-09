@@ -1,0 +1,40 @@
+.data
+	myMessage:	.asciiz		"Hello World!\n"
+	age:		.word 		23
+	PI: 		.float		3.14
+	myDouble:	.double		7.202
+	zeroDouble:	.double		0.0
+	line: 		.asciiz		"\n"
+.text
+	#Print a message
+	la $a0, myMessage
+	li $v0, 4
+	syscall
+	
+	#Print an integer
+	li $v0, 1
+	lw $a0, age
+	syscall
+	
+	#space
+	li $v0, 4
+	la $a0, line
+	syscall
+	
+	#Print an float
+	li $v0, 2
+	lwc1 $f12, PI
+	syscall
+	
+	#space
+	li $v0, 4
+	la $a0, line
+	syscall
+	
+	#Print double
+	ldc1 $f2, myDouble
+	ldc1 $f0, zeroDouble
+	add.d $f12, $f2, $f0
+	li $v0, 3
+	syscall
+	
