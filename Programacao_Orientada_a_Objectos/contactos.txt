@@ -1,0 +1,5 @@
+Nome	Phone	Email	Data de nascimento
+Rafael Semedo	912345670	semedo@ua.pt	2004-12-18
+Marcelo Júnior	912345675	junior@ua.pt	2001-03-16
+Anderson Tembe	913245678	pascoal@ua.pt	2006-06-08
+Judy Chemane	912345678	judy@ua.pt	2004-09-05
